@@ -5,22 +5,37 @@
     </head>
     <body>
         <div id="formWrapper">
-        <form method="post" name="myForm" target="dummyIframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfHQkdI3--Y7Z3T_Z2rOkCm4AnfApPsB8CLbvQTvc_PxR3dQg/formResponse">
+        <form method="post" class="myForm" name="myForm" target="dummyIframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfHQkdI3--Y7Z3T_Z2rOkCm4AnfApPsB8CLbvQTvc_PxR3dQg/formResponse">
             <div class="centering">
             <label>
-                <input name="entry.1172832359" type="text" placeholder="form1"/>
+                <input name="entry.1172832359" id="input1" type="text" placeholder="input1"/>
             </label>
             <label>
-                <input name="entry.1451736374" type="text" placeholder="form2"/>
+                <input name="entry.1451736374" id="input2" type="text" placeholder="input2"/>
             </label>
             <input type="submit" class="btbt" value="submit" id="submit1">
             </div>
         </form>
+        <div class="feedback"></div>
         <iframe name="dummyIframe" style="display:none;"></iframe>
         </div>
         <div id="thxMessage" style="display:none;"><p>success!</p></div>
         <script>
+            const form = document.querySelector('.myForm');
+            const feedback = document.querySelector('.feedback');
             submit1.addEventListener('click', (e) => {
+                e.preventDefault();
+                const input1 = form.input1.value;
+                if (input1 =="") {
+                    feedback.textContent = 'input1 is required';
+                    return;
+                }
+                const input2 = form.input2.value;
+                if (input2 =="") {
+                    feedback.textContent = 'input2 is required';
+                    return;
+                }
+                form.submit();
                 document.getElementById('formWrapper').style.display = 'none';
                 document.getElementById('thxMessage').style.display = 'block';
             });
