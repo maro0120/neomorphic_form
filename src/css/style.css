@@ -31,7 +31,7 @@ div#thxMessage > p {
 div.centering {
   text-align: center;
 }
-button, input {
+button, input, textarea {
   border: 0;
   outline: 0;
   border-radius: 20px;
@@ -55,6 +55,21 @@ input {
   font-family: inherit;
 }
 input:focus {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+textarea {
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  width: 80%;
+  height: 50vh;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 100%;
+  font-family: inherit;
+}
+textarea:focus {
   box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 .btbt {
