@@ -20,7 +20,7 @@ body {
   background-color: #EBECF0;
 }
 div#formWrapper {
-    width:80vw;
+    width:90vw;
     margin: auto;
 }
 div#thxMessage > p {
@@ -79,6 +79,7 @@ textarea:focus {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 600;
+  width:60vw;
 }
 .btbt:hover {
   box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
