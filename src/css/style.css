@@ -1,6 +1,17 @@
 body {
   background-color: #EBECF0;
 }
+div#formWrapper {
+    width:80vw;
+}
+div#thxMessage > p {
+  color: #61677C;
+  font-weight: bold;
+  text-align: center;
+}
+div.centering {
+  text-align: center;
+}
 button, input {
   border: 0;
   outline: 0;
@@ -13,12 +24,11 @@ button, input {
 label {
   display: block;
   margin-bottom: 24px;
-  width: 500px;
 }
 input {
   margin-right: 8px;
   box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
-  width: 100%;
+  width:80%;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   appearance: none;
