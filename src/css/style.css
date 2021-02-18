@@ -3,6 +3,7 @@ body {
 }
 div#formWrapper {
     width:80vw;
+    margin: auto;
 }
 div#thxMessage > p {
   color: #61677C;
